@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Blog Site</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link href="/webjars/bootstrap/5.2.3/css/bootstrap.min.css"
+	rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container">
+		
+<h1> Create a new blog post</h1>
+		<p>Please use the form below to submit a Blog Post:</p>
+		<form action="/blogposts" th:object="${blogPost}" method="post">
+			<table>
+
+				<tr>
+					<td>Title:</td>
+					<td><input type="text" th:field="*{title}"></td>
+				</tr>
+				<tr>
+					<td>Author:</td>
+					<td><input type="text" th:field="*{author}"></td>
+				</tr>
+				<tr>
+					<td>Blog Entry:</td>
+					<td><input type="text" th:field="*{blogEntry}"></td>
+				</tr>
+				<tr>
+					<td>
+						<button type="submit">Submit your Post</button>
+					</td>
+				</tr>
+
+			</table>
+		</form>
+	</div>
+	<script src="webjars/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
